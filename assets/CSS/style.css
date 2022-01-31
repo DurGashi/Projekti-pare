@@ -550,7 +550,8 @@ section .contactus {
   
 }
 
-@media screen and (min-width: 360px) and (orientation: portrait) {
+@media screen and (min-width: 360px) and (orientation: portrait) 
+{
   header {
     width: 100%;
     height: 42vh;
@@ -628,8 +629,7 @@ section .contactus {
     display: flex;
     flex-direction: column;
     align-content: center;
-
-    justify-content: space-around;
+    justify-content: center;
     width: 89%;
     height: 43vh;
 
@@ -674,11 +674,13 @@ section .contactus {
     display: grid;
     grid-template-columns: 80% ;
     grid-template-rows: 23% 23% 23% 23%;
-    margin-left: 3%;
+    margin-left: 0%;
     column-gap: 3%;
     row-gap: 7%;
   }
   .products figure {
+    justify-content: center;
+    align-content: center;
     border-radius: 10px;
   }
 
@@ -730,27 +732,32 @@ section .contactus {
     border-right:none;
     
   }
+  .contactus .message{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 
   .contactus .message input {
     width: 70%;
     height: 10%;
     padding: 1%;
-    margin: 2% 0% 2% 15%;
+    margin: 2% 0% 2% 13%;
     border-radius: 5px;
     border-width: thin;
   }
   .contactus .message h1{
-    margin-left: 15%;
+    margin-left: 13%;
   }
 
   .contactus .message textarea {
     width: 70%;
     height: 60px;
     display: block;
-    margin-left: 15%;
+    margin-left: 13%;
   }
   .contactus .message button {
-    margin-left:15% ;
+    margin-left:13% ;
   }
   /* Footer
       */
@@ -767,6 +774,7 @@ section .contactus {
   .copyright {
     width: 50%;
     justify-self: center;
+    
   }
   .socialicons {
     margin-top: 1%;
@@ -782,5 +790,3 @@ section .contactus {
   section {
     overflow: hidden;
   }
-  
-}
