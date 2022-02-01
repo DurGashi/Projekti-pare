@@ -388,7 +388,7 @@ section .contactus {
   color: white;
 }
 
-@media screen and (max-width: 599px) and (orientation: portrait) {
+@media screen and (max-width: 390px) and (orientation: portrait) {
   header {
     width: 100%;
     height: 42vh;
@@ -668,7 +668,7 @@ section .contactus {
 }
 
 /* Mobile */
-@media screen and (max-width: 820px) and (orientation: landscape) {
+@media screen and (max-width: 844px) and (orientation: landscape) {
   .minibanner p {
     font-size: 10px;
   }
@@ -815,7 +815,7 @@ section .contactus {
   }
 }
 
-@media screen and (min-width: 600px) and (orientation: portrait) {
+@media screen and (min-width: 820px) and (orientation: portrait) {
   header {
     width: 100%;
     height: 40vh;
@@ -1003,7 +1003,7 @@ section .contactus {
   /* Footer
       */
   .footer {
-    height: 75vh;
+    height: 35vh;
   }
   .footer-info {
     display: flex;
@@ -1033,7 +1033,7 @@ section .contactus {
 }
 
 /* Tablet */
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (max-width: 1180px) and (orientation: landscape) {
   .minibanner {
     width: 30%;
     height: 32vh;
