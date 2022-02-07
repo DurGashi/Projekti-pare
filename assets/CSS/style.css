@@ -388,7 +388,7 @@ section .contactus {
   color: white;
 }
 
-@media screen and (max-width: 390px) and (orientation: portrait) {
+@media screen and (min-width: 360px) and (orientation: portrait) {
   header {
     width: 100%;
     height: 42vh;
@@ -506,7 +506,7 @@ section .contactus {
       .*/
 
   .prod {
-    height: 350vh;
+    height: 359vh;
     padding-top: 5%;
     margin-bottom: 0%;
   }
@@ -527,6 +527,7 @@ section .contactus {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-left: 0%;
     margin-top: 10%;
+
     column-gap: 0%;
     row-gap: 2%;
     /* margin-top: 5%;
@@ -632,7 +633,7 @@ section .contactus {
   /* Footer
       */
   .footer {
-    height: 90vh;
+    height: 63vh;
     margin-bottom: 10%;
   }
 
@@ -647,7 +648,7 @@ section .contactus {
   }
   .copyright {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
 
     align-content: center;
   }
@@ -668,18 +669,20 @@ section .contactus {
 }
 
 /* Mobile */
-@media screen and (max-width: 844px) and (orientation: landscape) {
+@media screen and (max-width: 740px) and (orientation: landscape) {
   .minibanner p {
-    font-size: 10px;
+    font-size: 9px;
+    margin: 0%;
   }
   .minibanner h3 {
-    font-size: 14px;
+    font-size: 12px;
   }
   .minibanner a {
-    margin-bottom: 5%;
+    font-size: 12px;
+    margin: 0%;
   }
   .service {
-    height: 480vh;
+    height: auto;
   }
   .points a {
     width: 35%;
@@ -723,9 +726,6 @@ section .contactus {
     border-width: 1px;
     display: flex;
     flex-direction: row;
-    /* flex-direction: column;
-    justify-content: space-around;
-    align-content: center; */
   }
 
   .points figure:hover {
@@ -842,6 +842,7 @@ section .contactus {
   .service {
     width: 100%;
     height: auto;
+    margin-left: 5%;
   }
   .servicebanner {
     width: 100%;
@@ -909,6 +910,7 @@ section .contactus {
     width: 100%;
     height: 117vh;
     padding-top: 5%;
+    margin-left: 5%;
   }
   .prodbanner {
     width: 100%;
