@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consume API with Axios</title>
+  </head>
+  <body>
+    <div id="todos"></div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script>
+      const api_url = "https://jsonplaceholder.typicode.com/todos";
+
+      // call ne API permes Axios
+      axios
+        .get(api_url) // promise -> resolve
+        .then((resp) => {
+          // resp - objekt
+          // resp.data - qasje ne todos qe kthen api
+          const todos = resp.data;
+          let result = "";
+
+          todos.forEach((todo) => (result += todo.title + "<br />"));
+          document.getElementById("todos").innerHTML = result;
+        })
+        .catch((e) => console.log(e));
+    </script>
+  </body>
+</html>

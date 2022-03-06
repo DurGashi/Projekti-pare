@@ -8,9 +8,6 @@ p,
 span {
   font-family: "Roboto Slab", serif;
 }
-.error {
-  color: #cb2027;
-}
 
 header {
   width: 100%;
@@ -73,7 +70,7 @@ nav a {
 .minibanner {
   background-color: white;
   width: 25%;
-  height: 35vh;
+  height: 35%;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -85,12 +82,12 @@ nav a {
   align-self: center;
   width: auto;
   text-decoration: none;
-  padding: 2% 4% 2% 4%;
+  padding: 3% 4%;
   background-color: rgb(226, 66, 8);
   color: white;
   border-radius: 5px;
   text-align: center;
-  font-size: 100%;
+  font-size: 150%;
 }
 .minibanner a:hover {
   padding-right: 10%;
@@ -206,17 +203,79 @@ figure {
   padding: 5% 0 0 22%;
 }
 
-.products {
-  width: auto;
-  height: 160vh;
-  display: grid;
+.hidden {
+  display: none;
+}
+/* .exposedprod {
+  display: flex;
+  flex-direction: row;
+} */
+/* .products.hidden-items {
+  display: flex;
+} */
+/* .hiddenprod {
+  display: flex;
+} */
+.exposedprod,
+.hiddenprod {
+  width: 66%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-left: 17%;
+  /* display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 50% 50%;
   margin-left: 17%;
 
-  column-gap: 1%;
+  column-gap: 1%; */
 }
-.products figure {
+.btn button {
+  background-color: white; /* Green */
+  border-color: #f35921;
+  border-width: 1px;
+  border-radius: 8px;
+  color: #ca4413;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.btn button:hover {
+  border-color: #f35921;
+  background-color: #f35921;
+  color: white;
+  transition-delay: 0.2s;
+  transition: 0.6s;
+}
+
+/* .products a {
+  background-color: #f35921;
+  text-decoration: none;
+  color: white;
+  padding: 3% 20%;
+  border-radius: 6px;
+  align-self: center;
+  justify-self: center;
+  margin-top: 10%;
+  margin-bottom: 0%;
+}
+.products a:hover {
+  background-color: #a33a13;
+  transition-delay: 0.5s;
+  transition: 1s;
+} */
+.hiddenprod figure {
+  height: 50%;
+  border: 1px solid rgb(192, 200, 202);
+  border-radius: 10px;
+  padding-bottom: 5%;
+  transition: box-shadow 0.3s;
+}
+.exposedprod figure {
+  height: 50%;
   border: 1px solid rgb(192, 200, 202);
   border-radius: 10px;
   padding-bottom: 5%;
@@ -225,17 +284,21 @@ figure {
   align-items: space-between;
   flex-direction: column;
 }
+.hiddenprod figure:hover,
 .products figure:hover {
   box-shadow: 0 0 18px rgba(33, 33, 33, 0.575);
 }
+.hiddenprod figure img,
 .products figure img {
   height: auto;
   align-self: center;
 }
+.hiddenprod figure h3,
 .products figure h3 {
   font-size: 24px;
   padding-left: 3%;
 }
+.hiddenprod figure p,
 .products figure p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 15px;
@@ -248,6 +311,7 @@ figure {
   justify-content: space-around;
   align-content: flex-end;
 }
+.hiddenprod a,
 .products a {
   background-color: #f35921;
   text-decoration: none;
@@ -313,7 +377,7 @@ section .contactus {
   width: 40%;
   height: 10%;
   padding: 1%;
-  margin: 2%;
+  margin: 1%;
   border-radius: 5px;
   border-width: thin;
 }
@@ -321,7 +385,7 @@ section .contactus {
 .contactus .message textarea {
   width: 89%;
   height: 100px;
-  margin-left: 2%;
+  margin-left: 1%;
   margin-top: 3%;
   border-radius: 5px;
   display: inline-block;
@@ -332,7 +396,7 @@ section .contactus {
 .contactus .message button {
   width: 20%;
   margin: 5% 0;
-  margin-left: 2%;
+  margin-left: 1%;
   padding: 0%;
   border-radius: 8px 8px 8px 8px;
   background-color: #f35921;
@@ -345,6 +409,103 @@ section .contactus {
   transition-delay: 0.2s;
   transition: 0.5s;
 }
+.error {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 12px;
+  display: flex;
+  margin-top: 0%;
+  padding-left: 1%;
+  color: #cb2027;
+}
+/* covid API */
+.covid {
+  width: 100%;
+  width: auto;
+}
+.covid h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: #00c0d0;
+}
+.covid span {
+  color: #f35921;
+}
+.statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin: 2% 0;
+}
+.statistic {
+  color: #6caeb4;
+}
+.statistic span {
+  color: rgb(250, 67, 0);
+}
+.countryinfo,
+.covidCases,
+.deathCases {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 50%;
+}
+.statistic .covidCases span {
+  border: 1px solid;
+  background-color: #f35921;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+
+  padding: 2px;
+}
+.statistic .countryinfo span {
+  color: white;
+  background-color: #31ca3e;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: large;
+}
+
+.statistic .deathCases span {
+  border: 1px solid;
+  background-color: #f32121;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+
+  padding: 2px;
+}
+.statistic p {
+  color: cadetblue;
+  font-size: large;
+}
+.search {
+  width: 100%;
+  height: auto;
+  margin: 1% 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.country {
+  outline: none;
+  width: 24%;
+  height: 100%;
+  border-color: #f35921;
+  border-width: 2px;
+  border-radius: 8px;
+  color: #575351;
+  padding: 0.5% 32px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.country:focus {
+  color: #434d52;
+}
+
 .footer-info {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 12px;
@@ -1122,27 +1283,6 @@ section .contactus {
   }
 
   /* .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 . */
