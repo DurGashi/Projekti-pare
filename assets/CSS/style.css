@@ -15,7 +15,7 @@ header {
 }
 .navigation {
   width: 99%;
-  height: 12%;
+  height: 8%;
   display: flex;
   align-content: center;
   position: fixed;
@@ -80,14 +80,16 @@ nav a {
 }
 .minibanner a {
   align-self: center;
-  width: auto;
+  width: 50%;
+  height: auto;
   text-decoration: none;
-  padding: 3% 4%;
+  padding: 2% 4%;
   background-color: rgb(226, 66, 8);
   color: white;
   border-radius: 5px;
   text-align: center;
   font-size: 150%;
+  font-size: 18px;
 }
 .minibanner a:hover {
   padding-right: 10%;
@@ -491,7 +493,7 @@ section .contactus {
 }
 .country {
   outline: none;
-  width: 24%;
+  width: 25%;
   height: 100%;
   border-color: #f35921;
   border-width: 2px;
@@ -500,12 +502,21 @@ section .contactus {
   padding: 0.5% 32px;
   font-size: 17px;
   font-weight: bold;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 .country:focus {
   color: #434d52;
 }
-
+.country::-webkit-input-placeholder {
+  text-align: center;
+}
+.dataResp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+  color: #cb2027;
+}
 .footer-info {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 12px;

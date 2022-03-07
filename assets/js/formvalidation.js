@@ -1,5 +1,5 @@
 const errormsg = "Nuk është valid";
-const validmsg = "Është valide";
+// const validmsg = "Është valide";
 let form = document.getElementById("contact-form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();

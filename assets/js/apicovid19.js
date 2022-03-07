@@ -1,5 +1,6 @@
 const key = `ef81363736msh3948801c68a5e86p1f5229jsna67b61fc7739`;
       const data_container = document.querySelector("#data");
+      const errData = document.querySelector("#errData");
       const country = document.querySelector("#country");
 
       country.addEventListener("keyup", (e) => {
@@ -16,8 +17,11 @@ const key = `ef81363736msh3948801c68a5e86p1f5229jsna67b61fc7739`;
                 data_container.innerHTML = displayStatistics(
                   resp.data.response
                 );
+                errData.innerHTML= "";
               } else {
-                data_container.innerHTML = "No Data for this Country ";
+                data_container.innerHTML = "";
+                errData.innerHTML = "NUK KA TË DHËNA PËR KËTË SHTET!"
+
               }
             });
             break;
@@ -51,15 +55,15 @@ const key = `ef81363736msh3948801c68a5e86p1f5229jsna67b61fc7739`;
                   <div class="countryinfo">
                       <p>Kontinenti:<br /><span> ${item.continent} </span></h3>
                       <p>Shteti:<br /><span> ${item.country}</span></p>
-                      <p>Data:<br /><span> ${item.day}</span></p>
+                      <p>Data:<br /><span> ${item.day ? item.day : ""}</span></p>
                       </div>
                       <div class="covidCases">
-                      <p>Raste aktive:<br /><span> ${item.cases.active}</span></p>
-                      <p>Raste të reja:<br /><span> ${item.cases.new}</span></p>
+                      <p>Raste aktive:<br /><span> ${item.cases.active ? item.cases.active : 0}</span></p>
+                      <p>Raste të reja:<br /><span> ${item.cases.new ? item.cases.new : 0} </span></p>
                       <p>Totali i rasteve: <br /><span>${item.cases.total}</span></p>
                       </div>
                       <div class="deathCases">
-                      <p>Vdekjet e fundit:<br /><span> ${item.deaths.new}</span></p>
+                      <p>Vdekjet e fundit:<br /><span> ${item.deaths.new ? item.deaths.new : 0}</span></p>
                       <p>Totali i vdekjeve:<br /> <span>${item.deaths.total}</span></p>
                       
                       </div>
